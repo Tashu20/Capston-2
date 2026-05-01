@@ -555,3 +555,28 @@ body {
 .submit-btn:hover {
   background-color: #8b1a28;
 }
+@media (max-width: 768px) {
+  .sidebar {
+    width: 60px;
+    padding: 28px 8px;
+  }
+
+  .logo h2 {
+    display: none;
+  }
+
+  .menu-btn {
+    padding: 10px 8px;
+    font-size: 0;
+  }
+
+  .menu-btn::before {
+    content: attr(data-icon);
+    font-size: 18px;
+    color: #f0c4ca;
+  }
+
+  .sidebar-footer {
+    display: none;
+  }
+}
