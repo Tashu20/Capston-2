@@ -4,9 +4,10 @@
 
 import { useState } from "react"
 import GameCard from "../components/GameCard.jsx"
-import gamesData from "../data/gamesData.jsx"
 
-function Games() {
+
+
+    function Games({ games }) {
 
   // useState from notes
   const [searchText,    setSearchText]    = useState("")

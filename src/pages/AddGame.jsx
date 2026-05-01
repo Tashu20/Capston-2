@@ -5,7 +5,7 @@
 
 import { useState } from "react"
 
-function AddGame() {
+function AddGame({ games, setGames }) { 
 
   // one object for all form fields - from notes (industry standard)
   const [form, setForm] = useState({
@@ -51,6 +51,10 @@ function AddGame() {
       setErrors(foundErrors)
       return
     }
+    const newGame = { ...form, id: games.length + 1, 
+    players: Number(form.players), rating: Number(form.rating),
+     year: Number(form.year) }
+    setGames([...games, newGame])
 
     console.log("new game added:", form)
     setSuccess(true)

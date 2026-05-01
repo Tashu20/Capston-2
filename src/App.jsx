@@ -12,6 +12,7 @@ import AddGame from "./pages/AddGame.jsx"
 import "./App.css"
 
 function App() {
+  const [games, setGames] = useState(gamesData) 
 
   // useState from notes - track which page to show
   const [activePage, setActivePage] = useState("Dashboard")
@@ -19,9 +20,9 @@ function App() {
   // conditional rendering from notes - show page based on state
   function renderPage() {
     if (activePage === "Dashboard") return <Dashboard />
-    if (activePage === "Games")     return <Games />
+    if (activePage === "Games") return <Games games={games} />
     if (activePage === "Players")   return <Players />
-    if (activePage === "Add Game")  return <AddGame />
+    if (activePage === "Add Game") return <AddGame setGames={setGames} games={games} />
   }
 
   return (
