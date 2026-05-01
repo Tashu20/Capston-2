@@ -54,7 +54,7 @@ function AddGame({ games, setGames }) {
     const newGame = { ...form, id: games.length + 1, 
     players: Number(form.players), rating: Number(form.rating),
      year: Number(form.year) }
-    setGames([...games, newGame])
+    setGames((prevGames) => [...prevGames, newGame])
 
     console.log("new game added:", form)
     setSuccess(true)

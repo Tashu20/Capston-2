@@ -9,6 +9,7 @@ import Dashboard from "./pages/Dashboard.jsx"
 import Games from "./pages/Game.jsx"
 import Players from "./pages/Players.jsx"
 import AddGame from "./pages/AddGame.jsx"
+import gamesData from "./data/gamesData.jsx"
 import "./App.css"
 
 function App() {
